@@ -1,3 +1,4 @@
+import About from "./components/About"
 import Navbar from "./components/Navbar"
 import Page from "./components/Page"
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Navbar/>
       <Page/>
+      <About />
     </>
   )
 }
