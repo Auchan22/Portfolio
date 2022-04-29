@@ -1,5 +1,22 @@
-import { Container, Box, Heading, Image, useColorModeValue, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Container, Box, Heading, Image, useColorModeValue, Text, chakra, Flex } from '@chakra-ui/react'
+import { motion, isValidMotionProp } from 'framer-motion'
+
+const ChakraText = chakra(motion.p ,{
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
+} )
+
+const NAME = 'Agus Surila';
+
+const variants = {
+    visible: {
+        y:0,
+        scaleY:1
+    },
+    hover: {
+        y: [-1, -1.8, -2, -1.8, -1, 0],
+        scaleY: [1, 1.4, 2, 1.4, 1, 1],
+    }
+}
 
 const Page = () => {
   return (
@@ -22,7 +39,26 @@ const Page = () => {
                 />
             </Box>
             <Box flexGrow={1}>
-                <Text textAlign={'center'} fontSize={20}>Desarrollador Fullstack MERN, enfocado al Frontend Development</Text>
+                <Box textAlign={'center'} fontSize='6xl' >
+                    Hola, soy
+                    <ChakraText
+                    bgGradient="linear(to-r, #FF6363, #006E7F)"
+                    bgClip='text'
+                    fontWeight='extrabold'
+
+                    >
+                        {NAME.split('').map((letter, id) => (
+                            <motion.span
+                            variants={variants}
+                            initial='visible'
+                            whileHover='hover' 
+                            key={id}>
+                                {letter}
+                            </motion.span>
+                        ))
+                        }
+                    </ChakraText>
+                </Box>
             </Box>
         </Box>
 
