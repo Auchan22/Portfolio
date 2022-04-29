@@ -15,7 +15,8 @@
     "@fontsource/m-plus-rounded-1c": "^4.5.5",
     "framer-motion": "^6.2.10",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-intersection-observer": "^9.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
