@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, textDecoration } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 const styles = {
@@ -6,6 +6,16 @@ const styles = {
     body: {
       bg: mode('#EEEEEE', '#191919')(props);
     }
+  },
+};
+
+const components = {
+  Link: {
+    baseStyle: {
+      _hover: {
+        textDecoration: 'none',
+      },
+    },
   },
 };
 
@@ -23,6 +33,7 @@ const theme = extendTheme({
   config,
   styles,
   fonts,
+  components,
 });
 
 export default theme;
