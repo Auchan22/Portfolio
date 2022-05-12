@@ -5,6 +5,10 @@ body {
   font-family: 'M PLUS Rounded 1c', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 100px;
+  padding-top: 80px;
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
