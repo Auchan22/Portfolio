@@ -1,7 +1,9 @@
-import { Box, Container, Text, Heading, Button, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, Text, Heading, Button, useColorModeValue, Img, chakra, List, ListIcon, UnorderedList, ListItem } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
 import CV from '../../public/CV-AgusSurila.pdf'
 import { motion } from 'framer-motion'
+import { TEC } from "../assets/icons"
+
 
 const variants = {
     hidden: {
@@ -13,6 +15,7 @@ const variants = {
         borderTopWidth: '6px',
     }
 }
+
 
 const About = () => {
   return (
@@ -30,16 +33,31 @@ const About = () => {
                 transition={{delay: 2}}
             />
         </Box>
-        <Flex justifyContent='center' alignItems='center' flexDirection='column' gap='25px'>
-            <Text fontSize={20} letterSpacing={1}>
-                Soy un joven estudiante de la carrera de Licenciatura en Sistemas de la UNLP, pero tambien, <b>Frontend Developer</b>.<br/>
-                Empecé con el desarrollo web de forma autodidacta, y a día de hoy, sigo adquieriendo contenidos de la misma forma. Mi proxima meta es convertirme en MERN Stack Fullstack<br/>
-                Me considero un chico competitivo, con muchas ganas de progresar.
-            </Text>
-            <Button as="a" href={CV} download='CV-AgusSurila' colorScheme='blue' fontSize='20px' rightIcon={<DownloadIcon />}>
-                Descargar CV
-            </Button>
-        </Flex>
+        <Box  display='flex' alignItems='center' justifyContent='center' flexDir='row' mt='20px'>
+            <Box mr='20px'>
+                <Text fontSize={20} letterSpacing={1} mb='10px'>
+                    Hola, mi nombre es Agustin, y les vengo a presentar mi página web. Mi pasión por el desarrollo web surge durante el año 2020, durante la 1er etapa de aislamiento del Covid-19 en Argentina. Tuve mis inicios en PHP, por recomendación de mi padre (Analista en Sistemas), pero termine escogiendo el camino del desarrollo web.
+                </Text>
+                <Text fontSize={20} letterSpacing={1} mb='10px'>
+                    Al dia de hoy, curso el 1er año de la carrera de <chakra.span color='#2a9d8f' _hover={{filter: 'auto', brightness: '150%', fontWeight: 'bold', transition: 'all 250ms ease'}}>Licenciatura en Sistemas</chakra.span> en la Facultad de Informatica de la UNLP
+                </Text>
+                <Button as="a" href={CV} download='CV-AgusSurila' colorScheme='blue' fontSize='20px' rightIcon={<DownloadIcon />}>
+                    Descargar CV
+                </Button>
+            </Box>
+            <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width='400px' height='400px' borderRadius='md'/>
+        </Box>
+        <Box display='flex' alignItems='center' justifyContent='center' flexDir='column' mt='20px'>
+                <Text fontSize={20} letterSpacing={1} mb='10px'>
+                    Mi proyecto es poder desarrollarme como un desarrollador Fullstack MERN, por lo que dia a dia sigo aprendiendo nuevas tecnologías:
+                </Text>
+                <List spacing={3} padding="15px" bgColor={useColorModeValue("#edede9", "#4a4e69")} borderRadius="15px">
+                    {TEC.map(el => (
+                        <ListIcon mx={2} fontSize="50px" as={el.icon} color={useColorModeValue("#4a4e69", "#cad2c5")} _hover={{color: el.color, transition: "all 250ms ease"}} />
+
+                    ))}
+                </List>
+        </Box>
         
     </Container>
   )

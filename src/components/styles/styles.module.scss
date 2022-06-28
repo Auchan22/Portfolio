@@ -1,0 +1,21 @@
+
+.navbarLink{
+    position: relative;
+    font-weight: 700;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 0%;
+        border-bottom: 2px solid #4f88a8;
+    }
+
+    &:hover{
+        &::before{
+            width: 80%;
+            transition: all 250ms ease-out;
+        }
+        transition: all 250ms ease-out;
+    }
+}

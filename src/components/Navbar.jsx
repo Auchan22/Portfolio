@@ -2,7 +2,7 @@ import {Box, Flex, Heading, useColorModeValue, Container, Stack, IconButton, use
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import logo from '../../public/Logo.svg'
 import ThemeToggle from './theme-toggle'
-import { motion } from 'framer-motion'
+import styles from "./styles/styles.module.scss"
 
 const Logo = () =>{
     return (
@@ -16,21 +16,15 @@ const Logo = () =>{
 }
 
 const LinkModified = ({url, name}) =>{
+    
     return (
         <Link
-            as={motion.a}
+            className={styles.navbarLink}
             href={url}
-            initial={{
-                borderBottom: 'none'
+            paddingX='25px'
+            _hover={{
+                color: useColorModeValue('#282a36','#f8f9fa'),
             }}
-            whileHover={{ 
-                borderBottomWidth: '3px',
-                borderBottomColor: useColorModeValue('#00377e','#b9d6f2'),
-                borderBottomStyle: 'solid'
-            }}
-            transition={'ease-in'}
-            paddingX='15px'
-            
         >{name}</Link>
     )
 }
@@ -49,11 +43,11 @@ const DesktopNavbar = () =>{
     >
         <Container 
             display='flex'
-            p={2}
-            maxW='container.md'
+            maxW='100%'
             wrap='wrap'
             align='center'
-            justify='space-between'
+            paddingX="100px"
+            paddingY="10px"
         >
             <Flex
                 align={'center'}
@@ -72,9 +66,9 @@ const DesktopNavbar = () =>{
                 px={4}
                 mt='0'
             >
-                <LinkModified url='#' name="Sobre Mi"/>
-                <LinkModified url='#' name="Sobre Mi"/>
-                <LinkModified url='#' name="Sobre Mi"/>
+                <LinkModified url='#' name="Sobre mi"/>
+                <LinkModified url='#' name="Proyectos"/>
+                <LinkModified url='#' name="Contacto"/>
 
                 <ThemeToggle />
             </Stack>

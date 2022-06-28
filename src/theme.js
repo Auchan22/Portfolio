@@ -15,6 +15,7 @@ const components = {
       _hover: {
         textDecoration: 'none',
       },
+      color: '#7c858d',
     },
   },
 };

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
-
+/* @import './Styles/variables.sass'; */
 body {
   margin: 0;
   font-family: 'M PLUS Rounded 1c', sans-serif !important;
@@ -11,4 +11,23 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.link {
+  writing-mode: vertical-rl;
+}
+
+.figureti::after {
+  content: '';
+  width: 3px;
+  min-height: 100px;
+  margin: 10px auto;
+  background-color: #118ab2;
+}
+
+@media only screen and (min-width: 576px) {
+  .link,
+  .figureti {
+    display: none;
+  }
 }
