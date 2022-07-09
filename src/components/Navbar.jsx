@@ -1,8 +1,9 @@
 import {Box, Flex, Heading, useColorModeValue, Container, Stack, IconButton, useDisclosure, MenuButton, Menu, MenuList, MenuItem, MenuDivider, Link, useMediaQuery, Image, useColorMode} from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import logo from '../../public/Logo.svg'
-import ThemeToggle from './theme-toggle'
+import ThemeToggler from './ThemeToggler'
 import styles from "./styles/styles.module.scss"
+import { Link as LinkR } from 'react-scroll'
 
 const Logo = () =>{
     return (
@@ -15,17 +16,26 @@ const Logo = () =>{
     )
 }
 
-const LinkModified = ({url, name}) =>{
+const styleLink = {
+
+}
+
+const LinkModified = ({target, name}) =>{
     
     return (
-        <Link
+        <LinkR
             className={styles.navbarLink}
-            href={url}
-            paddingX='25px'
-            _hover={{
-                color: useColorModeValue('#282a36','#f8f9fa'),
-            }}
-        >{name}</Link>
+            to={target}
+            duration={500}
+            delay={100}
+            isDynamic={true}
+            offset={-100}
+            smooth={true}
+            // _hover={{
+            //     color: useColorModeValue('#282a36','#f8f9fa'),
+            // }}
+            style={{padding: "0px 25px"}}
+        >{name}</LinkR>
     )
 }
 
@@ -49,28 +59,22 @@ const DesktopNavbar = () =>{
             paddingX="100px"
             paddingY="10px"
         >
-            <Flex
-                align={'center'}
-                mr={5}    
-            >
-                <Logo/>
-            </Flex>
 
             <Stack
                 direction='row'
                 display='flex'
                 width='auto'
                 alignItems='center'
-                justifyContent='flex-end'
+                justifyContent='center'
                 flexGrow={1}
                 px={4}
                 mt='0'
             >
-                <LinkModified url='#' name="Sobre mi"/>
-                <LinkModified url='#' name="Proyectos"/>
-                <LinkModified url='#' name="Contacto"/>
+                <LinkModified target="AboutMe" name="Sobre mi"/>
+                <LinkModified target="Projects" name="Proyectos"/>
+                <LinkModified target="ContactMe" name="Contacto"/>
 
-                <ThemeToggle />
+                <ThemeToggler />
             </Stack>
 
             

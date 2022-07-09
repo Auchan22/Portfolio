@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 
-const ThemeToggle = () => {
+const ThemeToggler = () => {
     const {colorMode, toggleColorMode } = useColorMode()
   return (
       <IconButton
@@ -23,4 +23,4 @@ const ThemeToggle = () => {
   )
 }
 
-export default ThemeToggle
+export default ThemeToggler

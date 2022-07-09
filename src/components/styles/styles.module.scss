@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 .navbarLink{
     position: relative;
     font-weight: 700;
@@ -17,5 +17,35 @@
             transition: all 250ms ease-out;
         }
         transition: all 250ms ease-out;
+        cursor: pointer;
+    }
+}
+
+.encabezadoProyectos {
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+}
+
+.effectImg{
+    width: 400px;
+    height: 400px;
+    flex: 1;
+    border-radius: 15px;
+    filter: blur(3px) ;
+
+    &:hover{
+        filter: blur(0);
+        box-shadow: 10px 10px 34px -6px rgba(26,181,165,1);
+        transition: all 250ms ease-out;
+    }
+}
+
+.sectionTitle{
+    &::after{
+        content: "";
+        position: absolute;
+        width: 20%;
+        margin: 20px 15px;
+        border-bottom: 3px solid #4f88a8;
     }
 }
