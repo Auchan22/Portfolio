@@ -1,7 +1,7 @@
 import { Box, Container, Text, Heading, Button, useColorModeValue, Img, chakra, List, ListIcon, UnorderedList, ListItem } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
 import CV from '../../public/CV-AgusSurila.pdf'
-import { TEC } from "../assets/icons"
+import { TEC } from "../json/icons"
 import styles from "./styles/styles.module.scss"
 import { Element } from 'react-scroll'
 

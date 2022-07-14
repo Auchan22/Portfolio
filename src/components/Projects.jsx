@@ -1,6 +1,6 @@
 import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
-import { PROJECTS } from '../assets/projects'
+import { PROJECTS } from '../json/projects'
 import ProjectList from './ProjectList'
 import styles from "./styles/styles.module.scss"
 import { Element } from 'react-scroll'

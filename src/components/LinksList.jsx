@@ -1,6 +1,6 @@
 import React from 'react'
 import { Stack, Icon, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
-import { LINKS } from '../assets/icons'
+import { LINKS } from '../json/icons'
 
 const LinksList = () => {
     const [isLargerThan620] = useMediaQuery('(min-width: 620px)')

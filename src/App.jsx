@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 import Hero from './components/Hero'
 import { motion, isValidMotionProp, useAnimation, useViewportScroll } from 'framer-motion'
 import { useInView } from "react-intersection-observer"
-import { LINKS } from './assets/icons'
+import { LINKS } from './json/icons'
 import { Icon, Stack, useColorModeValue, Link, useMediaQuery} from '@chakra-ui/react'
 import ProjectCard from './components/ProjectCard'
 import Projects from './components/Projects'
