@@ -48,17 +48,18 @@ const About = () => {
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
                         Al dia de hoy, curso el 1er año de la carrera de <HighlightText content="Licenciatura en sistemas"/> en la Facultad de Informatica de la UNLP
                     </Text>
-                    <Button as="a" href={CV} download='CV-AgusSurila' colorScheme='blue' fontSize='20px' rightIcon={<DownloadIcon />}>
+                    <Button as="a" href={CV} download='CV-AgusSurila' _hover={{backgroundColor: useColorModeValue("#000000", "#ffffff"), outline: `3px solid ${useColorModeValue("#000000", "#ffffff")}`, outlineOffset: "3px", transition: "all 100ms ease" }} borderRadius={50} height="60px" backgroundColor={useColorModeValue("#000000", "#ffffff")} color={useColorModeValue("#ffffff", "#000000")} fontSize='20px' rightIcon={<DownloadIcon />}
+                    aria-label="Boton de descarga Currículum">
                         Descargar CV
                     </Button>
                 </Box>
-                <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width='400px' height='400px' borderRadius='md' mt={{base: "20px", md: 0}}/>
+                <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width={{base: "300px", md: "400px"}} height={{base: "300px", md: "400px"}} borderRadius='md' mt={{base: "20px", md: 0}} alt="Foto personal"/>
             </Box>
             <Box maxWidth={{base: "100%", md: "100%"}} display='flex' alignItems='center' justifyContent='center' flexDir='column' mt='20px'>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
                         Mi proyecto es poder desarrollarme como un desarrollador <HighlightText content="Fullstack MERN"/>, por lo que dia a dia sigo aprendiendo nuevas tecnologías:
                     </Text>
-                    <List spacing={3} padding="15px" bgColor={useColorModeValue("#edede9", "#4a4e69")} borderRadius="15px">
+                    <List spacing={3} padding={{base: "10px", md: "15px"}} bgColor={useColorModeValue("#edede9", "#4a4e69")} borderRadius="15px">
                         {TEC.map((el, index) => (
                             <ListIcon key={index} mx={2} fontSize="50px" as={el.icon} color={useColorModeValue("#4a4e69", "#cad2c5")} _hover={{color: el.color, transition: "all 250ms ease"}} />
 

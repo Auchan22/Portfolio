@@ -4,9 +4,9 @@ import { FiGithub, FiExternalLink } from "react-icons/fi"
 
 const URL_IMG = "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
 
-const EffectImage = ({query}) =>{
+const EffectImage = () =>{
     return (
-        <Img borderRadius='md' flex={1} src={URL_IMG} position={{base: "absolute", md: "relative"}} zIndex={{base: "-1", md: "0"}}  className={{base: null, md: styles.effectImg}} filter={{base: "auto", md: "auto"}} brightness={{base: "30%"}}  maxWidth="90vw" minHeight="400px" />
+        <Img alt="Imagén del proyecto" borderRadius='md' flex={1} src={URL_IMG} position={{base: "absolute", md: "relative"}} zIndex={{base: "-1", md: "0"}}  className={{base: null, md: styles.effectImg}} filter={{base: "auto", md: "auto"}} brightness={{base: "30%"}}  maxWidth="90vw" minHeight="400px" />
     )
 }
 
@@ -41,7 +41,7 @@ const ProjectCard = ({data, position}) => {
                 <Box maxWidth="90vw" maxH="400px" ml={{base: 0, md: 5}} pl="2px" flex={1}>
                     <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
                     <Heading as="h3" size="2xl" color={{base:"#f1faee" , md: useColorModeValue("#000000", "#f1faee")}}>{data.title}</Heading>
-                    <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} noOfLines="5" width={{base:"80vw", md: "20vw"}} maxHeight="200px">
+                    <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} noOfLines={6} width={{base:"80vw", md: "20vw"}} maxHeight="200px">
                         {data.desc}
                     </Text>
                     <List mt={5} flexWrap={{base: "wrap", md: "nowrap"}} display="flex" alignItems="center" textAlign="center">
@@ -57,7 +57,7 @@ const ProjectCard = ({data, position}) => {
                 <Box maxWidth="90vw" maxH="300px" flex={1} mr={{base: 0, md: 5}}>
                     <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
                     <Heading as="h3" size="2xl" color={{base:"#f1faee" , md: useColorModeValue("#000000", "#f1faee")}}>{data.title}</Heading>
-                    <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} noOfLines="5" width={{base:"80vw", md: "20vw"}} maxHeight="200px">
+                    <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} noOfLines={6} width={{base:"80vw", md: "20vw"}} maxHeight="200px">
                         {data.desc}
                     </Text>
                     <List mt={5} display="flex" flexWrap={{base: "wrap", md: "nowrap"}} alignItems="center" textAlign="center">

@@ -65,17 +65,21 @@ export const LINKS = [
   {
     icon: TbBrandTwitter,
     color: '#1A8CD8',
+    link: 'https://twitter.com/SurilaAgus',
   },
   {
     icon: TbBrandGithub,
     color: '#000000',
+    link: 'https://github.com/Auchan22',
   },
   {
     icon: TbBrandLinkedin,
     color: '#0A66C2',
+    link: 'https://www.linkedin.com/in/agus-surila-80b29b1b5/',
   },
   {
     icon: TbBrandInstagram,
     color: '#F4AE90',
+    link: 'https://www.instagram.com/agussurila/',
   },
 ];

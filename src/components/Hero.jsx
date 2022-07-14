@@ -39,7 +39,7 @@ const DownArrow = () =>{
         })
     }
     return (
-        <Box position="relative" margin={{base: "25% auto", md: "0px auto"}} bottom="15%" display="flex" alignItems="center" justifyContent="center" flexDir="column" minWidth="200px">
+        <Box aria-label='Boton scrolleable' position="relative" margin={{base: "25% auto", md: "0px auto"}} bottom="15%" display="flex" alignItems="center" justifyContent="center" flexDir="column" minWidth="200px">
             <Text as="h5" mb="15px">Conoceme un poco más</Text>
             <motion.div variants={variants} style={stylesArrow} whileHover="hover" onClick={handleScroll}>
                 <Icon as={BsArrowDown} fontSize="35px" />

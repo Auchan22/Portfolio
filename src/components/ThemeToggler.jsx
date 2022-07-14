@@ -20,6 +20,7 @@ const ThemeToggler = () => {
           boxShadow:
             'none',
         }}
+        aria-label="Cambiar Tema"
       />
   )
 }

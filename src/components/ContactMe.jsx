@@ -10,7 +10,7 @@ const ContactMe = () => {
                 <Heading as='h1' size='2xl' textAlign="center" color={useColorModeValue("#000000", "#ffffff")}>
                     Contactame
                 </Heading>
-                <Text noOfLines={3} fontSize="18px"  textAlign="center" maxWidth="400px">
+                <Text fontSize="18px"  textAlign="center" maxWidth="400px">
                     ¿Querés conocerme más a fondo o querés trabajar conmigo? O si simplemente queres hablar, hacelo con gusto, no muerdo!
                 </Text>
                 <Button 
@@ -22,6 +22,7 @@ const ContactMe = () => {
                         outlineOffset: "3px", 
                         transition: "all 250ms ease"}
                         }
+                        aria-label='Enviarme un Correo'
                     >
                         <Link isExternal href='mailto:agustinsurila@gmail.com'>
                             ¡Hola!
