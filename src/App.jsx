@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import About from "./components/About"
 import Navbar from "./components/Navbar"
@@ -11,6 +11,47 @@ import ProjectCard from './components/ProjectCard'
 import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
+import Logros from './components/Logros'
+import LinksList from './components/LinksList'
+
+const achivements = [
+  {
+      id: 1,
+      datos: {
+          title: 'Empeza a conocerme',
+          description: "Entraste a mi página por primera vez",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+          position: "top-right"
+      },
+        active: false
+  },
+  {
+      id: 2,
+      datos: {
+          title: 'Avanzaste',
+          description: "Entraste a mi página por primera vez",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+          position: "top-right"
+      },
+      active: false
+  },
+  {
+      id: 3,
+      datos: {
+          title: 'Empeza a conocerme',
+          description: "Entraste a mi página por primera vez",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+          position: "top-right"
+      },
+      active: false
+  }
+]
 
 const variants = {
   visible: {
@@ -19,21 +60,6 @@ const variants = {
   hidden: {
     opacity: 0, scale: 1, backgroundColor: 'transparent'
   }
-}
-
-const LinksLeft = () =>{
-  return (
-    <Stack direction='column' padding="10px"  position="fixed" zIndex={100} bottom="0%" className='figureti'>
-      {
-        LINKS.map((el, index) => (
-          <a href="#" key={index}>
-            <Icon fontSize="25px" margin="10px auto" as={el.icon} color={useColorModeValue("#000000", "#edf6f9")} _hover={{color: el.color, transition: "all 250ms ease", cursor: "pointer"}}/>
-          </a>
-            
-        ))
-      }
-    </Stack>
-  )
 }
 
 const EmailRight = () => {
@@ -68,11 +94,17 @@ function App() {
 
   const [isLargerThan620] = useMediaQuery('(min-width: 620px)')
 
+  // useEffect(()=>{
+  //   localStorage.setItem("achivements", JSON.stringify(achivements))
+  // }, [])
+
   return (
     <>
       {
-        isLargerThan620 ? <><LinksLeft/><EmailRight/></> : null
+        isLargerThan620 ? <><LinksList/><EmailRight/></> : null
       }
+
+      {/* <Logros /> */}
 
       <Navbar/>
       <Hero  />

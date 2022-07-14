@@ -8,9 +8,9 @@ import { Element } from 'react-scroll'
 const Projects = () => {
   return (
     <Element name="Projects">
-      <Container mt={6} minWidth={{base: '80vw', md: '60vw'}}>
+      <Container mt={6} minWidth={{base: '90vw', md: '60vw'}}>
           <Box>
-              <Heading as='h1' size='2xl' className={styles.sectionTitle} color={useColorModeValue("#000000", "#ffffff")}>
+              <Heading as='h1' size='2xl' className={{base: null, md:styles.sectionTitle}} color={useColorModeValue("#000000", "#ffffff")}>
                   Proyectos
               </Heading>
               <ProjectList data={PROJECTS} />

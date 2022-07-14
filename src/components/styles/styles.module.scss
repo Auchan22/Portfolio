@@ -27,11 +27,11 @@
 }
 
 .effectImg{
-    width: 400px;
-    height: 400px;
+    min-width: 400px;
+    min-height: 400px;
     flex: 1;
     border-radius: 15px;
-    filter: blur(3px) ;
+    filter: blur(3px);
 
     &:hover{
         filter: blur(0);
@@ -39,6 +39,17 @@
         transition: all 250ms ease-out;
     }
 }
+
+// @media screen and (max-width: 620px){
+//     .effectImg{
+//         min-width: 100%;
+//         min-height: 60vh;
+//         position: absolute;
+//         border-radius: 15px;
+//         filter: opacity(25%) ;
+//         z-index: -1;
+//     }
+// }
 
 .sectionTitle{
     &::after{
@@ -49,3 +60,12 @@
         border-bottom: 3px solid #4f88a8;
     }
 }
+
+.menuMobile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+  }

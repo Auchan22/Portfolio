@@ -26,9 +26,9 @@ const HighlightText = ({content}) =>{
 const About = () => {
   return (
     <Element name="AboutMe">
-        <Container mt={6} minWidth={{base: '80vw', md: '60vw'}} >
+        <Container mt={6} minWidth={{base: '90vw', md: '60vw'}} >
             <Box>
-                <Heading as='h1' size='2xl' className={styles.sectionTitle} color={useColorModeValue("#000000", "#ffffff")}>
+                <Heading as='h1' size='2xl' className={{base: 0, md: styles.sectionTitle}} display={{base: "flex"}} alignItems={{base: "center"}} color={useColorModeValue("#000000", "#ffffff")}>
                     Sobre Mí
                 </Heading>
                 {/* <motion.hr 
@@ -40,8 +40,8 @@ const About = () => {
                     transition={{delay: 2}}
                 /> */}
             </Box>
-            <Box  display='flex' alignItems='center' justifyContent='center' flexDir='row' mt='20px'>
-                <Box mr='20px'>
+            <Box maxWidth={{base: "100%", md: "100%"}} display='flex' alignItems='center' justifyContent='center' px={0} flexDir={{base: "column", md: "row"}} mt='20px'>
+                <Box mr={{base: 0, md: "20px"}}>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
                         Hola, mi nombre es <HighlightText content="Agustin"/>, y les vengo a presentar mi página web. Mi pasión por el desarrollo web surge durante el año 2020, durante la 1er etapa de aislamiento del Covid-19 en Argentina. Tuve mis inicios en PHP, por recomendación de mi padre (Analista en Sistemas), pero termine escogiendo el camino del desarrollo web.
                     </Text>
@@ -52,9 +52,9 @@ const About = () => {
                         Descargar CV
                     </Button>
                 </Box>
-                <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width='400px' height='400px' borderRadius='md'/>
+                <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width='400px' height='400px' borderRadius='md' mt={{base: "20px", md: 0}}/>
             </Box>
-            <Box display='flex' alignItems='center' justifyContent='center' flexDir='column' mt='20px'>
+            <Box maxWidth={{base: "100%", md: "100%"}} display='flex' alignItems='center' justifyContent='center' flexDir='column' mt='20px'>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
                         Mi proyecto es poder desarrollarme como un desarrollador <HighlightText content="Fullstack MERN"/>, por lo que dia a dia sigo aprendiendo nuevas tecnologías:
                     </Text>
