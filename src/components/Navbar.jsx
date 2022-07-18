@@ -1,6 +1,6 @@
 import {Box, Flex, Heading, useColorModeValue, Container, Stack, IconButton, useDisclosure, MenuButton, Menu, MenuList, MenuItem, MenuDivider, Link, useMediaQuery, Image, useColorMode, useDimensions, position} from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import logo from '../../public/Logo.svg'
+import logo from '../../public/Logo_Agus.svg'
 import ThemeToggler from './ThemeToggler'
 import styles from "./styles/styles.module.scss"
 import { Link as LinkR } from 'react-scroll'

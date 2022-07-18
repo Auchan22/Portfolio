@@ -1,9 +1,10 @@
 import { Box, Container, Text, Heading, Button, useColorModeValue, Img, chakra, List, ListIcon, UnorderedList, ListItem } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
-import CV from '../../public/CV-AgusSurila.pdf'
+import CV from '../../public/CV-agus-surila.pdf'
 import { TEC } from "../json/icons"
 import styles from "./styles/styles.module.scss"
 import { Element } from 'react-scroll'
+import imagenPerfil from "../../public/ImagenPerfil.png"
 
 const variants = {
     hidden: {
@@ -53,7 +54,7 @@ const About = () => {
                         Descargar CV
                     </Button>
                 </Box>
-                <Img src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' width={{base: "300px", md: "400px"}} height={{base: "300px", md: "400px"}} borderRadius='md' mt={{base: "20px", md: 0}} alt="Foto personal"/>
+                <Img src={imagenPerfil} width={{base: "300px", md: "400px"}} height={{base: "300px", md: "400px"}} borderRadius='md' mt={{base: "20px", md: 0}} alt="Foto personal"/>
             </Box>
             <Box maxWidth={{base: "100%", md: "100%"}} display='flex' alignItems='center' justifyContent='center' flexDir='column' mt='20px'>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
