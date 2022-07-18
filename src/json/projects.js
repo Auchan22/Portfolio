@@ -34,7 +34,10 @@ export const PROJECTS = [
     img:
       'https://agustinsurila.vercel.app/Logotipo_Dolarsucho.png' ||
       'http://localhost:3000/Logotipo_Dolarsucho.png',
-    links: ['https://github.com/Auchan22/Dolarsucho', ''],
+    links: [
+      'https://github.com/Auchan22/Dolarsucho',
+      'https://dolarsucho.netlify.app/',
+    ],
     Tec: ['HTML', 'CSS', 'Javascript', 'Netlify'],
   },
   {
