@@ -25,7 +25,7 @@ const ContactMe = () => {
                         aria-label='Enviarme un Correo'
                     >
                         <Link isExternal href='mailto:agustinsurila@gmail.com'>
-                            ¡Hola!
+                            !Escribime!
                         </Link>
                     </Button>
             </Box>

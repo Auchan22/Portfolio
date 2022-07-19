@@ -62,11 +62,11 @@ export const TEC = [
 ];
 
 export const LINKS = [
-  {
-    icon: TbBrandTwitter,
-    color: '#1A8CD8',
-    link: 'https://twitter.com/SurilaAgus',
-  },
+  // {
+  //   icon: TbBrandTwitter,
+  //   color: '#1A8CD8',
+  //   link: 'https://twitter.com/SurilaAgus',
+  // },
   {
     icon: TbBrandGithub,
     color: '#000000',
@@ -77,9 +77,9 @@ export const LINKS = [
     color: '#0A66C2',
     link: 'https://www.linkedin.com/in/agus-surila-80b29b1b5/',
   },
-  {
-    icon: TbBrandInstagram,
-    color: '#F4AE90',
-    link: 'https://www.instagram.com/agussurila/',
-  },
+  // {
+  //   icon: TbBrandInstagram,
+  //   color: '#F4AE90',
+  //   link: 'https://www.instagram.com/agussurila/',
+  // },
 ];

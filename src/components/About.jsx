@@ -44,7 +44,7 @@ const About = () => {
             <Box maxWidth={{base: "100%", md: "100%"}} display='flex' alignItems='center' justifyContent='center' px={0} flexDir={{base: "column", md: "row"}} mt='20px'>
                 <Box mr={{base: 0, md: "20px"}}>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
-                        Hola, mi nombre es <HighlightText content="Agustin"/>, y les vengo a presentar mi página web. Mi pasión por el desarrollo web surge durante el año 2020, durante la 1er etapa de aislamiento del Covid-19 en Argentina. Tuve mis inicios en PHP, por recomendación de mi padre (Analista en Sistemas), pero termine escogiendo el camino del desarrollo web.
+                        Hola, mi nombre es <HighlightText content="Agustin"/>, ¡Quiero que me conozcas!. Mi pasión por el desarrollo web surge durante el año 2020, durante la 1er etapa de aislamiento del Covid-19 en Argentina. Tuve mis inicios en PHP, por recomendación de mi padre (Analista en Sistemas), pero termine escogiendo el camino del desarrollo web.
                     </Text>
                     <Text fontSize={20} letterSpacing={1} mb='10px'>
                         Al dia de hoy, curso el 1er año de la carrera de <HighlightText content="Licenciatura en sistemas"/> en la Facultad de Informatica de la UNLP

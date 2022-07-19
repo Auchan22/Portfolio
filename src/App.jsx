@@ -13,6 +13,7 @@ import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
 import Logros from './components/Logros'
 import LinksList from './components/LinksList'
+import LoadingPage from './components/LoadingPage'
 
 const achivements = [
   {
@@ -93,28 +94,32 @@ function AnimatedSection({children}){
 function App() {
 
   const [isLargerThan620] = useMediaQuery('(min-width: 620px)')
+  const [loading, setLoading] = useState(true)
 
-  // useEffect(()=>{
-  //   localStorage.setItem("achivements", JSON.stringify(achivements))
-  // }, [])
+  useEffect(()=>{
+    // localStorage.setItem("achivements", JSON.stringify(achivements))
+    setTimeout(()=>{
+      setLoading(false)
+    }, 5000)
+  }, [])
 
   return (
-    <>
-      {
-        isLargerThan620 ? <><LinksList/><EmailRight/></> : null
-      }
-
-      {/* <Logros /> */}
-
-      <Navbar/>
-      <Hero  />
       
-      <AnimatedSection children={<About />}/>
-      <AnimatedSection children={<Projects />}/>
-      <AnimatedSection children={<ContactMe />}/>
+        loading ? <LoadingPage/> : 
+        <>
+          {
+            isLargerThan620 ? <><LinksList/><EmailRight/></> : null
+          }
 
-      <Footer />
-    </>
+          <Navbar/>
+          <Hero  />
+          
+          <AnimatedSection children={<About />}/>
+          <AnimatedSection children={<Projects />}/>
+          <AnimatedSection children={<ContactMe />}/>
+    
+          <Footer />
+        </>
   )
 }
 

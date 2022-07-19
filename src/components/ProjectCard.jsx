@@ -16,13 +16,13 @@ const Links = ({l}) =>{
             {/* {console.log(l)} */}
             {l[0] === "" ? null : 
                 <Link href={l[0]} isExternal>
-                    <Icon as={FiGithub} fontSize="24px" _hover={{transform: "scale(1.5, 1.5)", transition: "all 250ms ease-in-out"}}/>
+                    <Icon as={FiGithub} fontSize="30px" color={useColorModeValue("#000000", "#FFFFFF")} _hover={{transform: "scale(1.5, 1.5)", transition: "all 250ms ease-in-out"}}/>
                 </Link>
             }
             
             {l[1] === "" ? null : 
                 <Link href={l[1]} isExternal>
-                    <Icon as={FiExternalLink} fontSize="24px" _hover={{transform: "scale(1.5, 1.5)", transition: "all 250ms ease-in-out"}}/>
+                    <Icon as={FiExternalLink} fontSize="30px" color={useColorModeValue("#000000", "#FFFFFF")} _hover={{transform: "scale(1.5, 1.5)", transition: "all 250ms ease-in-out"}}/>
                 </Link>
             }
             
@@ -39,7 +39,7 @@ const ProjectCard = ({data, position}) => {
             <>
                 <EffectImage src={data.img} />
                 <Box borderRadius="md" backdropFilter={{base: "auto", md: "none"}} backdropBlur="5px" backdropBrightness="30%" maxWidth="400px" minH={{base: "400px", md: "400px"}} ml={{base: 0, md: 2}} padding={{base: "10px", md: 0}} flex={1}>
-                    <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
+                    <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} mb="20px" className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
                     <Heading as="h3" size="2xl" color={{base:"#f1faee" , md: useColorModeValue("#000000", "#f1faee")}}>{data.title}</Heading>
                     <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} mb="50px" width={{base:"80vw", md: "20vw"}} maxHeight="200px">
                         {data.desc}
@@ -54,8 +54,8 @@ const ProjectCard = ({data, position}) => {
             </>
              : 
              <>
-                <Box  padding={{base: "10px", md: 0}} backdropFilter={{base: "auto", md: "none"}} borderRadius="md" backdropBlur="5px" backdropBrightness="30%" maxWidth="400px" minH="400px" flex={1} mr={{base: 0, md: 2}}>
-                    <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
+                <Box padding={{base: "10px", md: 0}} backdropFilter={{base: "auto", md: "none"}} borderRadius="md" backdropBlur="5px" backdropBrightness="30%" maxWidth="400px" minH="400px" flex={1} mr={{base: 0, md: 2}}>
+                    <Text as="h5" color={{base: "#aafac8", md: useColorModeValue("#081c15", "#aafac8")}} mb="20px" className={styles.encabezadoProyectos}>Proyecto Seleccionado</Text>
                     <Heading as="h3" size="2xl" color={{base:"#f1faee" , md: useColorModeValue("#000000", "#f1faee")}}>{data.title}</Heading>
                     <Text mt="10px" color={{base: "#b7b7a4", md: useColorModeValue("#081c15", "#b7b7a4")}} mb="50px" width={{base:"80vw", md: "20vw"}} maxHeight="200px">
                         {data.desc}

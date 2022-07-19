@@ -67,8 +67,8 @@ const Hero = () => {
             margin="0px 10px"
         >
             <Box textAlign="left" marginLeft={{base: 0, md: "15%"}}>
-                <Text as="h5" size='sm' className={styles.encabezadoProyectos} mb="20px">Hola, yo soy</Text>
-                <Heading as="h1" fontSize={{base: "44px", md: "100px"}}>Agustin Surila</Heading>
+                <Text fontSize="25px" className={styles.encabezadoProyectos}  mb="20px">Hola, yo soy</Text>
+                <Heading as="h1" fontSize={{base: "44px", md: "100px"}} mb="20px">Agustin Surila</Heading>
                 <Heading as="h3" size='2xl' color={useColorModeValue('#2a9d8f', '#005f73')}>Front-end Developer</Heading>
                 <Text fontWeight="500" mt="20px" maxHeight={{base: "200px" }} width={{base: "300px", md: "600px"}}>Soy un joven autodidacta, en busca de aprender cada día cosas nuevas y mejorarme con el paso del tiempo. Actualmente, me encuentro buscando mi primer empleo, con muchas ansías de trabajar en equipo.</Text>
 

@@ -139,7 +139,7 @@ const MobileNavbar = () =>{
                 <MenuToggler toggle={() => toggleOpen()} open={isOpen}/>
             </Box>
 
-            <motion.div variants={variants} initial="closed" animate={isOpen ? "open" : "closed"} style={{ width: "75vw", minHeight: "100%", backgroundColor: useColorModeValue("#e2e8f0", "#2d3748"), zIndex: "100",  position: "fixed", top: 0, right: 0, boxShadow: "-12px -1px 331px 51px rgba(0,90,189,1)"}}>
+            <motion.div variants={variants} initial="closed" animate={isOpen ? "open" : "closed"} style={{ width: "75vw", minHeight: "100%", backgroundColor: useColorModeValue("#e2e8f0", "#2d3748"), backdropFilter: "auto", backdropBlur: "10px", zIndex: "100",  position: "fixed", top: 0, right: 0, boxShadow: "-12px -1px 331px 51px rgba(0,90,189,1)"}}>
                     
                         {isOpen ? (
                                 <Stack mt="80px" alignItems="center" justifyContent="space-between" minHeight="40%" spacing={4}>
