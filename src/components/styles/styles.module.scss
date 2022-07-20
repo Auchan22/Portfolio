@@ -1,43 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
-.navbarLink{
-    position: relative;
-    font-weight: 700;
-    &::before{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 10%;
-        width: 0%;
-        border-bottom: 2px solid #4f88a8;
-    }
+.navbarLink {
+  position: relative;
+  font-weight: 700;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 0%;
+    border-bottom: 2px solid #4f88a8;
+  }
 
-    &:hover{
-        &::before{
-            width: 80%;
-            transition: all 250ms ease-out;
-        }
-        transition: all 250ms ease-out;
-        cursor: pointer;
+  &:hover {
+    &::before {
+      width: 80%;
+      transition: all 250ms ease-out;
     }
+    transition: all 250ms ease-out;
+    cursor: pointer;
+  }
 }
 
 .encabezadoProyectos {
-    font-family: 'Fira Code', monospace;
-    font-weight: 500;
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
 }
 
-.effectImg{
-    min-width: 400px;
-    min-height: 400px;
-    flex: 1;
-    border-radius: 15px;
-    filter: blur(3px);
+.effectImg {
+  min-width: 400px;
+  min-height: 400px;
+  flex: 1;
+  border-radius: 15px;
+  filter: blur(3px);
 
-    &:hover{
-        filter: blur(0);
-        box-shadow: 10px 10px 34px -6px rgba(26,181,165,1);
-        transition: all 250ms ease-out;
-    }
+  &:hover {
+    filter: blur(0);
+    box-shadow: 10px 10px 34px -6px rgba(26, 181, 165, 1);
+    transition: all 250ms ease-out;
+  }
 }
 
 // @media screen and (max-width: 620px){
@@ -51,21 +51,21 @@
 //     }
 // }
 
-.sectionTitle{
-    &::after{
-        content: "";
-        position: absolute;
-        width: 20%;
-        margin: 20px 15px;
-        border-bottom: 3px solid #4f88a8;
-    }
+.sectionTitle {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    margin: 20px 15px;
+    border-bottom: 3px solid #4f88a8;
+  }
 }
 
 .menuMobile {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 0;
-    width: 300px;
-    background: #fff;
-  }
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}

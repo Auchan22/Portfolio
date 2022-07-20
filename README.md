@@ -1,6 +1,6 @@
 # Portfolio
 
-_Repositorio dedicado a mi portfolio Personal.
+\_Repositorio dedicado a mi portfolio Personal.
 
 ## Construido con 🛠️
 

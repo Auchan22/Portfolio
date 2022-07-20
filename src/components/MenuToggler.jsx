@@ -1,13 +1,16 @@
-import { Icon } from '@chakra-ui/react'
-import React from 'react'
-import { useState } from 'react'
-import {AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
+import { Icon } from '@chakra-ui/react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
-const MenuToggler = ({toggle, open}) => {
-
+const MenuToggler = ({ toggle, open }) => {
   return (
-        <Icon aria-label='Boton para abrir menú' fontSize="25px" width="50px" onClick={toggle} as={open ? AiOutlineClose : AiOutlineMenu}/>
-  )
-}
+    <Icon
+      aria-label='Boton para abrir menú'
+      as={open ? AiOutlineClose : AiOutlineMenu}
+      fontSize='25px'
+      width='50px'
+      onClick={toggle}
+    />
+  );
+};
 
-export default MenuToggler
+export default MenuToggler;

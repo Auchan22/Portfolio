@@ -1,15 +1,19 @@
-import { Box } from '@chakra-ui/react'
-import React from 'react'
-import ProjectCard from './ProjectCard'
+import { Box } from '@chakra-ui/react';
 
-const ProjectList = ({data}) => {
+import ProjectCard from './ProjectCard';
+
+const ProjectList = ({ data }) => {
   return (
     <Box display='flex' flexDir='column' mt='20px'>
-        {data.map((el, index)=>(
-            <ProjectCard data={el} position={el.id % 2 === 0 ? "left" : "right"} />
-        ))}
+      {data.map((el, index) => (
+        <ProjectCard
+          key={index}
+          data={el}
+          position={el.id % 2 === 0 ? 'left' : 'right'}
+        />
+      ))}
     </Box>
-  )
-}
+  );
+};
 
-export default ProjectList
+export default ProjectList;

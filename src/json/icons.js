@@ -1,21 +1,20 @@
 import {
-  DiReact,
+  DiBootstrap,
+  DiCss3,
+  DiGit,
+  DiHtml5,
+  DiJsBadge,
+  DiMongodb,
   DiMysql,
   DiNodejsSmall,
-  DiBootstrap,
-  DiHtml5,
-  DiGit,
-  DiCss3,
-  DiMongodb,
-  DiJsBadge,
+  DiReact,
 } from 'react-icons/di';
 import { SiChakraui } from 'react-icons/si';
-
 import {
-  TbBrandTwitter,
-  TbBrandLinkedin,
   TbBrandGithub,
   TbBrandInstagram,
+  TbBrandLinkedin,
+  TbBrandTwitter,
 } from 'react-icons/tb';
 
 export const TEC = [
