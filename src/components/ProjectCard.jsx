@@ -96,9 +96,11 @@ const ProjectCard = ({ data, position }) => {
         <>
           <EffectImage src={data.img} />
           <Box
-            backdropBlur='5px'
-            backdropBrightness='30%'
             backdropFilter={{ base: 'auto', md: 'none' }}
+            // eslint-disable-next-line react/jsx-sort-props
+            backdropBlur='5px'
+            // eslint-disable-next-line react/jsx-sort-props
+            backdropBrightness='30%'
             borderRadius='md'
             flex={1}
             maxWidth='400px'
@@ -166,9 +168,11 @@ const ProjectCard = ({ data, position }) => {
       ) : (
         <>
           <Box
-            backdropBlur='5px'
-            backdropBrightness='30%'
             backdropFilter={{ base: 'auto', md: 'none' }}
+            // eslint-disable-next-line react/jsx-sort-props
+            backdropBlur='5px'
+            // eslint-disable-next-line react/jsx-sort-props
+            backdropBrightness='30%'
             borderRadius='md'
             flex={1}
             maxWidth='400px'
